@@ -13,10 +13,15 @@ export PNETCDF='/soft/libraries/pnetcdf/current/cnk-xl/current'
 export PIO=/home/douglasj/ParallelIO/pio  
 
 # Tau support?  
-# soft add +tau-2.21.2  
-# export TAU_MAKEFILE=???  
-# export TAU_OPTIONS='-optRevert -optNoCompInst'  
+## soft add +tau-2.21.2  
+## export TAU_MAKEFILE=???  
+## export TAU_OPTIONS='-optRevert -optNoCompInst'  
 
+# Need to edit ESMF source
+ - Edit src/external/esmf
+ - Comment out all lines within #ifdef HIDE_MPI
+
+# Building MPAS-O
 make bluegene CORE=ocean GEN_F90=true  
 
 # If building with TAU:  
