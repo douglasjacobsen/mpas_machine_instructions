@@ -18,7 +18,7 @@ export PIO=/home/douglasj/ParallelIO/pio
 ## export TAU_OPTIONS='-optRevert -optNoCompInst'  
 
 # Need to edit ESMF source
- - Edit src/external/esmf
+ - Edit src/external/esmf_time_f90/ESMF_Stubs.F90
  - Comment out all lines within #ifdef HIDE_MPI
 
 # Building MPAS-O
